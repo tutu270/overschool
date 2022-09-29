@@ -1,0 +1,23 @@
+server:
+  port: 8144
+  servlet:
+    context-path: /over
+
+spring:
+  datasource:
+    username: overschool
+    password: PFy5BESbtEDyfzj6
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.99.61.124:3306/overschool?characterEncoding=utf8
+
+  jackson:
+    serialization:
+      indent-output: true
+
+mybatis:
+  mapper-locations: mappers/*.xml
+  type-aliases-package: overschool.entity
+
+logging:
+  level:
+    overschool.repository: debug
