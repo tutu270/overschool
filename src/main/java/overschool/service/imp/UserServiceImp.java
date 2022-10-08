@@ -1,7 +1,5 @@
 package overschool.service.imp;
 
-import cn.dev33.satoken.stp.StpUtil;
-import cn.dev33.satoken.util.SaResult;
 import com.github.yitter.idgen.YitIdHelper;
 import org.springframework.stereotype.Service;
 import overschool.entity.User;
@@ -57,11 +55,12 @@ public class UserServiceImp implements UserService {
     public String login(User user) {
         User paw = userRepository.login(user);
         if (paw != null) {
-            StpUtil.login(paw.getUserId());
-            return SaResult.ok("ok").toString();
-
+//            StpUtil.login(paw.getUserId());
+//            return SaResult.ok("ok").toString();
+            return "ok";
         } else {
-            return SaResult.error("no").toString();
+                return "no";
+//            return SaResult.error("no").toString();
         }
     }
 }

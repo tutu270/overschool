@@ -14,6 +14,15 @@ spring:
     serialization:
       indent-output: true
 
+  mail:
+    host: smtp.163.com
+    username: a2019485524@163.com
+    password: LBYLKWLTYYLFLTKW
+    default-encoding: UTF-8
+    protocol: smtp
+
+
+
 mybatis:
   mapper-locations: mappers/*.xml
   type-aliases-package: overschool.entity
@@ -37,3 +46,4 @@ sa-token:
 logging:
   level:
     overschool.repository: debug
+
