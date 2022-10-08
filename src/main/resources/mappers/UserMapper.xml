@@ -7,13 +7,16 @@
         select * from user where aname=#{aname};
     </select>
     <insert id="addUser" parameterType="User">
-        insert into user(aname,apwd) values(#{aname},#{apwd});
+        insert into user(userId,aname,apwd) values(#{userId},#{aname},#{apwd});
     </insert>
     <select id="getAllUser" resultType="overschool.entity.User">
         SELECT * FROM user;
     </select>
     <select id="getIndexUser" resultType="User" parameterType="User">
         SELECT * FROM user WHERE id=#{id};
+    </select>
+    <select id="login" resultType="User">
+        SELECT * FROM user WHERE aname=#{aname} AND apwd=#{apwd};
     </select>
 
 </mapper>

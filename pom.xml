@@ -62,6 +62,18 @@
             <artifactId>yitter-idgenerator</artifactId>
             <version>1.0.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>1.31.0</version>
+        </dependency>
     </dependencies>
 
     <build>

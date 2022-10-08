@@ -1,5 +1,7 @@
 package overschool.service.imp;
 
+import cn.dev33.satoken.stp.StpUtil;
+import cn.dev33.satoken.util.SaResult;
 import com.github.yitter.idgen.YitIdHelper;
 import org.springframework.stereotype.Service;
 import overschool.entity.User;
@@ -13,9 +15,17 @@ import java.util.List;
 public class UserServiceImp implements UserService {
     @Resource
     UserRepository userRepository;
+
     @Override
     public String addUser(User user) {
-        if (userRepository.isExistUser(user) ==null) {
+        Long userId = YitIdHelper.nextId();
+        StringBuilder sb = new StringBuilder();
+        sb.append(userId);
+        sb.reverse();
+        userId = Long.parseLong(sb.toString()) / 1000000;
+        System.out.println(userId);
+        user.setUserId(userId);
+        if (userRepository.isExistUser(user) == null) {
             if (userRepository.addUser(user) > 0) {
                 return "ok";
             } else {
@@ -40,6 +50,18 @@ public class UserServiceImp implements UserService {
             return user;
         } else {
             return null;
+        }
+    }
+
+    @Override
+    public String login(User user) {
+        User paw = userRepository.login(user);
+        if (paw != null) {
+            StpUtil.login(paw.getUserId());
+            return SaResult.ok("ok").toString();
+
+        } else {
+            return SaResult.error("no").toString();
         }
     }
 }

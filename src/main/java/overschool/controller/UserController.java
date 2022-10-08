@@ -27,7 +27,12 @@ public class UserController {
     @ResponseBody
     @PostMapping("/indexUser")
     public User indexUser(@RequestBody User user) {
-
         return userService.getIndexUser(user);
+    }
+
+    @ResponseBody
+    @PostMapping("/login")
+    public String loginUser(@RequestBody User user) {
+       return userService.login(user);
     }
 }

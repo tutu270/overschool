@@ -15,4 +15,6 @@ public interface UserRepository {
 
     User getIndexUser(User user);
 
+    User login(User user);
+
 }
