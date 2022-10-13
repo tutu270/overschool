@@ -1,4 +1,4 @@
-package socketService;
+package overschool.socketService;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;

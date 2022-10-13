@@ -12,8 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class overSchoolApplication {
 
 
-
-
     public static void main(String[] args) {
         IdGeneratorOptions options = new IdGeneratorOptions();
 
