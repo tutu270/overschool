@@ -1,5 +1,6 @@
 package overschool;
 
+import cn.dev33.satoken.SaManager;
 import com.github.yitter.contract.IdGeneratorOptions;
 import com.github.yitter.idgen.YitIdHelper;
 import org.mybatis.spring.annotation.MapperScan;

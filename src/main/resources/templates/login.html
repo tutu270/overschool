@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="./lib/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div>
+  <form action="http://localhost:8144/over/test" method="post">
+    <div>
+      <label>用户名</label>
+      <input type="text" name="username" id="username">
+      <label>密码</label>
+      <input type="password" name="password" id="password">
+      <label>验证码</label>
+      <img src="http://localhost:8144/over/captcha" height="150px" width="200px">
+      <input type="text" name="code" id="code">
+      <input type="submit" value="登录">
+    </div>
+  </form>
+</div>
+</body>
+</html>
