@@ -17,4 +17,6 @@ public interface UserRepository {
 
     User login(User user);
 
+    User findByUserName( String username);
+
 }

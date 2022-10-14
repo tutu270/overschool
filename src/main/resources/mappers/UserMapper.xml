@@ -18,5 +18,8 @@
     <select id="login" resultType="User">
         SELECT * FROM user WHERE aname=#{aname} AND apwd=#{apwd};
     </select>
+    <select id="findByUserName" resultType="overschool.entity.User">
+        SELECT * FROM user WHERE aname=#{aname};
+    </select>
 
 </mapper>
